@@ -1,0 +1,11 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 IC382 Project: Perspective Transformation & 2D Tabletop Coordinate Mapping (3D2D.py)\
+\
+This script implements an OpenCV-based vision calibration and coordinate transformation prototype that maps 2D camera image pixels to real-world 2D tabletop coordinates. Supporting both live camera feeds and static images, the program identifies the four corners of a rectangular table either automatically (via Canny edge detection and contour approximation) or through manual mouse clicks, and then computes a Homography matrix (perspective transformation) based on user-defined physical table dimensions. Once calibrated, it automatically detects target objects (using HSV color segmentation and contour moments) or accepts manually clicked points, converting their pixel coordinates into physical tabletop (X, Y) coordinates. As its output, the program prints the converted real-world coordinates to the console and displays three real-time OpenCV visualization windows: the Main View (showing detected corners, contours, and coordinate overlays), the Warped Top-Down View (a bird's-eye perspective-corrected view of the table), and the binary Object Mask. \
+\uc0\u65281 \u65281 \u65281 Note on System Integration: The core homography mapping logic in this standalone prototype has since been merged with the 3-RGB-camera multi-view perception subsystem; therefore, the current integrated system pipeline utilizes only the core coordinate transformation components rather than executing this standalone script in its entirety.}
